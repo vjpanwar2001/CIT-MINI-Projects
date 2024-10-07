@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="logo">
+          <h3>Logo</h3>
+        </div>
+        <ul class="menu">
+          <li>Contact</li>
+          <li><button>How it works</button></li>
+          <li><button>Get Started</button></li>
+        </ul>
+        <div class="menubar"><i class="fa-solid fa-bars"></i></div>
+        <div class="responsive">
+          <ul class="menu">
+            <li>Contact</li>
+            <li>How it works</li>
+            <li>Get Started</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section1">
+        <div class="cols">
+          <h1>Create Engaging Landing Page</h1>
+          <p>
+            Build beautiful landing pages in record time with Anima’s Landing
+            Page UI kit for Figma. No code required!
+          </p>
+          <div class="btns">
+            <button>Get Started</button>
+            <button>How it works</button>
+          </div>
+        </div>
+        <div class="cols">
+          <img src="./Visuals.svg" alt="" />
+        </div>
+      </div>
+      <div class="section2">
+        <div class="innersection">
+          <img src="./_Client logo.svg" alt="" />
+          <img src="./_Client logo (1).svg" alt="" />
+          <img src="./_Client logo (2).svg" alt="" />
+          <img src="./_Client logo (3).svg" alt="" />
+          <img src="./_Client logo (4).svg" alt="" />
+          <img src="./Layer 2.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let menubar = document.getElementsByClassName("menubar")[0];
+    let bar = document.getElementsByClassName("fa-bars")[0];
+
+    menubar.addEventListener("click", (e) => {
+      if (bar.classList.contains("fa-bars")) {
+        bar.classList.remove("fa-bars");
+
+        bar.classList.add("fa-xmark");
+        document.getElementsByClassName("responsive")[0].style.cssText =
+          "left:0%;";
+      } else {
+        bar.classList.remove("fa-xmark");
+
+        bar.classList.add("fa-bars");
+        document.getElementsByClassName("responsive")[0].style.cssText =
+          "left:-100%;";
+      }
+    });
+    
+  </script>
+
+</html>

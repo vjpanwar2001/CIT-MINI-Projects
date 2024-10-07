@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.8s;
+            
+        }
+        button{
+            padding: 15px 35px;
+            background-color: tomato;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            position: absolute;
+            font-size: 25px;
+            top: 10px;
+            left: 10px;
+            border: 2px solid black;
+            border-radius: 15px;
+        }
+
+        .model{
+            width: 400px;
+            height: 250px;
+            box-shadow: 0 0 10px 0 #fff;
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: black;
+            border-radius: 10px;
+            transition: 0.8s;
+
+        }
+        span{
+            color: white;
+            float: right;
+            padding: 15px 25px ;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <button>Model </button>
+    <div class="model">
+            <span>&times;</span>
+    </div>
+</body>
+<script>
+    let model = document.getElementsByClassName('model')[0];
+    let btn = document.getElementsByTagName('button')[0];
+    let closebtn = document.getElementsByTagName('span')[0];
+
+    btn.addEventListener("click",(e)=>{  
+        model.style.cssText="top:50%";
+        document.getElementsByTagName('body')[0].style.cssText="background:rgba(0,0,0,0.5)";  
+        console.log(e.target.style.display='none')
+    })
+
+    closebtn.addEventListener('click',(e)=>{
+        model.style.cssText="top:-50%";
+        document.getElementsByTagName('body')[0].style.cssText="background:white";  
+        console.log(btn.style.display='block')
+    })
+
+
+
+    // btn.onclick = ()=>{
+    //     alert("hello")
+    // }
+
+</script>
+</html>
