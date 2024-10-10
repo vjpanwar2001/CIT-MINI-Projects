@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+        }
+        .imagebox{
+            width: 700px;
+            height: 450px;
+            border: 2px solid white;
+            box-shadow: 0 0 15px 0 white;
+        }
+        .imagebox img{
+                width: 100%;
+                height: 100%;
+        }
+        .multi-image{
+            display: flex;
+            gap: 30px;
+            margin-top: 25px;
+
+        }
+        .multi-image img{
+            border: 2px solid white;
+            padding: 9px;
+            width: 150px;
+            height: 150px;
+            box-shadow: 0 0px 10px 0 rgba(255,255,255,0.5  );
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="imagebox">
+        <img src="https://img.freepik.com/free-vector/realistic-liquid-marble-background-with-gold_52683-60060.jpg?t=st=1728372405~exp=1728376005~hmac=af8af0cb5f25d9ebb7ae444bb7a3af7f231a2951e2bffb72a591edf33f7aa23e&w=900" alt="">
+    </div>
+    <div class="multi-image">
+        <img src="https://img.freepik.com/free-photo/chopped-raw-pumpkin-put-wooden-cutting-board_1150-34561.jpg?t=st=1728372554~exp=1728376154~hmac=abee97a0d49301d1027cb48894cc7d858a5b9821b98714d5084c3823fc415df7&w=900" alt="" onclick="multiimage(this)">
+        <img src="https://img.freepik.com/free-vector/set-mountain-logo-badges_1150-41065.jpg?t=st=1728373145~exp=1728376745~hmac=afebd3d799069e88617a012e5d2f0a471fde8602692761c470559bb78f334ea4&w=900" alt="" onclick="multiimage(this)" >
+        <img src="https://img.freepik.com/free-photo/view-astronaut-spacesuit-snowboarding-moon_23-2151294913.jpg?t=st=1728373210~exp=1728376810~hmac=63f826f6e22e61013b2a667422ba90bae609d17dcf6455057221dd050594880c&w=900" alt="" onclick="multiimage(this)">
+        <img src="https://img.freepik.com/free-photo/astronaut-diving-digital-art_23-2151198158.jpg?t=st=1728373237~exp=1728376837~hmac=215bda22b4b0b3af38b7353c8a5c654be6ba42779ae13dd1e9e535d7d617ca86&w=826" alt="" onclick="multiimage(this)">
+    </div>
+</body>
+<script>
+    let mainimg = document.querySelector(".imagebox img");
+
+    function multiimage(a){
+        var bigimg = mainimg; 
+        bigimg.src = a.src
+
+    }   
+
+
+
+</script>
+</html>
